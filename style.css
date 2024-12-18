@@ -1,0 +1,182 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Neutral background for overall design */
+}
+
+/* Header Section */
+header {
+    background: #2e2e2e; /* Dark background for header */
+    color: #fff; /* White text for contrast */
+    padding: 1rem 3rem; /* Balanced padding for header content */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertically center the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header .logo {
+    font-size: 2.5rem; /* Large font size for logo prominence */
+    font-weight: bold;
+    color: #ff6f00; /* Highlighted orange color for logo */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Horizontal layout for navigation items */
+    margin: 0 15px; /* Space between navigation links */
+    font-size: 1.15rem; /* Slightly larger font size for links */
+}
+
+nav ul li a {
+    color: #fff; /* White links for visibility on dark background */
+    text-decoration: none; /* Removes underline for cleaner look */
+    font-weight: bold; /* Bold links for better readability */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #ff6f00; /* Orange highlight on hover */
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('banner.jpg') no-repeat center center/cover; /* Adds a banner image with an overlay */
+    height: 450px; /* Fixed height for banner */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    color: white; /* White text for readability */
+}
+
+.banner-text {
+    text-align: center; /* Center-aligns text */
+    max-width: 600px; /* Restricts text width */
+    padding: 20px; /* Adds padding around the text */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for contrast */
+    border-radius: 10px; /* Smooth corners */
+}
+
+.banner-text h1 {
+    font-size: 3.5rem; /* Large font size for the main heading */
+    margin-bottom: 10px; /* Space below heading */
+    font-weight: bold;
+    color: #ff6f00; /* Orange highlight for the heading */
+}
+
+.banner-text p {
+    font-size: 1.5rem; /* Large font size for the description */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Button Styling */
+.btn {
+    background: #ff6f00; /* Orange background for buttons */
+    color: #fff; /* White text for contrast */
+    padding: 12px 24px; /* Balanced padding for a clickable button */
+    text-decoration: none; /* Removes underline from text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-size: 1rem; /* Readable font size */
+}
+
+.btn:hover {
+    background: #ff9047; /* Lighter orange for hover state */
+}
+
+/* Events Section */
+.events h2 {
+    font-family: Helvetica; /* Clean font for section heading */
+    font-size: 2rem; /* Prominent font size */
+    text-align: center; /* Center-aligned heading */
+}
+
+.event-list {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Spreads out event items */
+    flex-wrap: wrap; /* Wraps items on smaller screens */
+    gap: 1.5rem; /* Space between items */
+    margin-bottom: 4rem; /* Adds spacing below the section */
+}
+
+.event-item {
+    width: 20rem; /* Fixed width for event cards */
+    height: 23rem; /* Fixed height for uniformity */
+    border: 2px solid #000; /* Black border for emphasis */
+    border-radius: 0.5rem; /* Smooth corners */
+    background-color: #232323; /* Dark background for events */
+    padding: 1rem; /* Padding inside the card */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: space-between; /* Distributes space between elements */
+    color: #fff; /* White text for contrast */
+}
+
+.event-item:hover {
+    box-shadow: 8px 20px 10px grey; /* Shadow effect on hover */
+}
+
+.event-image {
+    width: 15rem; /* Fixed width for images */
+    height: 11rem; /* Fixed height for images */
+    border-radius: 0.5rem; /* Smooth corners */
+}
+
+.event-image img {
+    height: 10.5rem; /* Fits image within container */
+    width: 15rem; 
+    border-radius: 0.25rem; /* Slight rounding for images */
+}
+
+.event-title {
+    font-weight: 600; /* Bold title for emphasis */
+    line-height: 2.5rem; /* Spaced-out title */
+    font-size: 1.3rem; /* Slightly larger font size */
+    text-align: center; /* Center-aligned text */
+}
+
+.event-info {
+    font-size: 1rem; /* Standard font size */
+    opacity: 0.75; /* Slight transparency for subtlety */
+    text-align: center; /* Center-aligned text */
+}
+
+.event-info:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* Footer Section */
+footer {
+    background: #2e2e2e; /* Dark background matching header */
+    color: #fff; /* White text for contrast */
+    text-align: center; /* Centered content */
+    padding: 15px 0; /* Padding for comfortable spacing */
+    position: relative;
+    bottom: 0; /* Sticks to bottom of the page */
+    width: 100%; /* Full-width footer */
+}
+
+footer p {
+    margin: 0; /* Removes default margin */
+    font-size: 0.9rem; /* Small font for footer text */
+}
+
+footer a {
+    color: #ff6f00; /* Orange links for consistency */
+    text-decoration: none; /* Removes underline for cleaner look */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for accessibility */
+}

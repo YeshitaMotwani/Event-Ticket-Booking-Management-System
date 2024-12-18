@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+header {
+    padding: 20px;
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+#home-button {
+    background-color: #ff4757;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h2{
+    color:red;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin:1rem;
+    padding:0.5rem;
+}
+#dashboard{
+    text-align: center;
+}
+/* 
+.ticket-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticket-card h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ticket-details span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.qr-code {
+    margin-top: 10px;
+    text-align: center;
+} */

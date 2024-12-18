@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Event Ticket Booking System</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="book.html">Book Tickets</a></li>
+                <li><a id="dashboard-button" href="dashboard.html">Dashboard</a></li> 
+                <li><a href="#contact">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-text">
+            <h1>Welcome to EventBook</h1>
+            <p>Book tickets for your favorite events now!</p>
+            <a href="book.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-list">
+            <div class="event-item" data-event="Rock Concert">
+                <div class="event-image">
+                    <img src="event1.jpg" alt="Concert">
+                </div>
+                <div class="event-title">
+                    <h3>Rock Concert</h3>
+                </div>
+                <div class="event-info">
+                    <h3>Show timing: 5:00PM</h3>
+                    <p>Get ready to rock! Join us for an electrifying night of live music with top bands and unforgettable performances</p>
+                </div>
+            </div>
+            <div class="event-item" data-event="Drama Night">
+                <div class="event-image">
+                    <img src="event2.jpeg" alt="Play">
+                </div>
+                <div class="event-title">
+                    <h3>Drama Night</h3>
+                </div>
+                <div class="event-info">
+                    <h3>Show timing: 7:30PM</h3>
+                    <p>Experience the magic of theater! Enjoy a captivating performance with incredible storytelling and live action on stage.</p>
+                </div>
+            </div>
+            <div class="event-item" data-event="Stand-up Comedy">
+                <div class="event-image">
+                    <img src="event3.jpeg" alt="Standup Comedy">
+                </div>
+                <div class="event-title">
+                    <h3>Stand-up Comedy</h3>    
+                </div>
+                <div class="event-info">
+                    <h3>Show timing: 9:30PM</h3>
+                    <p>Laugh out loud with the best comedians in town! A night filled with hilarious jokes and unstoppable fun awaits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Owner - Smit Mulhar</h2>
+        <p>Email: <a href="#">20230802216@dypiu.ac.in</a></p>
+        <p>Phone: +91 9146119173</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Event Ticket Booking</h1>
+    </header>
+    <div class="container">
+        <section id="payment-section">
+            <h2>Payment</h2>
+            <p>Total Amount: <span id="total-amount">Rs 0</span></p>
+            <h3>Select Payment Method</h3>
+            <div class="payment-options">
+                <button class="payment-btn">Credit/Debit Card</button>
+                <button class="payment-btn">Net Banking</button>
+                <button class="payment-btn">UPI</button>
+                <button class="payment-btn">Wallet</button>
+            </div>
+            <button id="complete-payment" class="btn">Complete Payment</button>
+
+            <div class="ticket" id="ticket" style="display: none;">
+                <h2>Your Ticket</h2>
+                <div class="ticket-details">
+                    <p><strong>Event:</strong> <span id="ticket-event"></span></p>
+                    <p><strong>Seat Number:</strong> <span id="ticket-seats"></span></p>
+                    <p><strong>Show Timing:</strong> <span id="ticket-time"></span></p>
+                    <div id="qrcode"></div>
+                </div>
+                <!-- <button id="print-ticket" class="btn">Print Ticket</button> -->
+                <button id="home-button">Complete</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const event = localStorage.getItem('selectedEvent');
+        const seats = localStorage.getItem('selectedSeats');
+        const totalPrice = localStorage.getItem('totalPrice');
+        let showTime='';
+        if(event==='Rock Concert')
+            showTime='5:00 PM';
+        else if(event==='Drama Night')
+            showTime='7:30 PM';
+        else
+            showTime='9:30 PM';
+
+        document.getElementById('total-amount').innerText = `Rs ${totalPrice}`;
+
+        document.getElementById('complete-payment').addEventListener('click', function () {
+            
+            const booking = {
+                event: event,
+                seats: seats,
+                totalPrice: totalPrice,
+                showTime: showTime,
+                bookingTime: new Date().toLocaleString() 
+            };
+
+            
+            const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+            
+            bookings.push(booking);
+
+            
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+
+            
+            document.getElementById('ticket').style.display = 'block';
+            document.getElementById('ticket-event').innerText = event;
+            document.getElementById('ticket-seats').innerText = seats;
+            document.getElementById('ticket-time').innerText = showTime;
+
+            $('#qrcode').qrcode({
+                text: `Event: ${event}, Seats: ${seats}, Time: ${showTime}, Total Price: Rs ${totalPrice}`
+            });
+        });
+
+        // document.getElementById('print-ticket').addEventListener('click', function () {
+        //     const ticketElement = document.getElementById('ticket');
+        //     html2canvas(ticketElement).then(function (canvas) {
+        //         const pdf = new jsPDF();
+        //         pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 15, 15, 180, 160);
+        //         pdf.save('ticket.pdf');
+        //     });
+        // });
+
+        document.getElementById("home-button").addEventListener("click", function () {
+            window.location.href = "index.html"; 
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

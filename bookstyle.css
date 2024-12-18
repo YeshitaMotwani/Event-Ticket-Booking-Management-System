@@ -1,0 +1,226 @@
+/* Reset and Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent sizing across elements */
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background-color: #f4f7f6; /* Soft background for a professional look */
+    color: #333; /* Default text color */
+}
+
+/* Header Section */
+header {
+    background-color: #1e1e2d; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    letter-spacing: 1px;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 2rem; /* Larger size for branding/logo prominence */
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+nav ul li a {
+    color: #fff; /* White links for visibility on dark background */
+    text-decoration: none; /* Removes underline for cleaner look */
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #f06449; /* Highlight color for hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+/* Booking Section */
+.booking {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem; /* Large, prominent title */
+    color: #333;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease; /* Smooth fade-in effect */
+}
+
+/* Form Container */
+.form-container {
+    background: #fff; /* Clean white background */
+    border-radius: 10px; /* Smooth corners */
+    padding: 40px;
+    max-width: 600px; /* Restricts width for better focus */
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between fields */
+    text-align: left;
+}
+
+label {
+    font-weight: 600; /* Bold labels for clarity */
+    margin-bottom: 10px;
+    display: block; /* Ensures labels stack neatly */
+}
+
+input, select {
+    width: 100%; /* Full width for easier interaction */
+    padding: 10px;
+    border-radius: 5px; /* Rounded input fields */
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.btn {
+    margin: 1rem;
+    background-color: #f06449; /* Button color for prominence */
+    color: white; /* White text for contrast */
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem; /* Slightly larger font for importance */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button for modern look */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Seat Selection Section */
+.seat-selection {
+    margin-top: 40px;
+}
+
+.stage {
+    width: 100%;
+    height: 60px;
+    background-color: #f1c40f; /* Highlighted color for stage */
+    text-align: center;
+    line-height: 60px; /* Centers text vertically */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded stage corners */
+}
+
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center seat rows */
+    margin: 30px 0;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center; /* Align seats within a row */
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    background-color: #3498db; /* Default seat color */
+    border: 1px solid #333;
+    margin: 5px;
+    border-radius: 5px; /* Smooth corners for seats */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.seat:hover {
+    background-color: #2980b9; /* Slightly darker blue for hover */
+}
+
+.seat.booked {
+    background-color: #e74c3c; /* Red for booked seats */
+    cursor: not-allowed; /* Disables interaction */
+}
+
+.seat.selected {
+    background-color: #2ecc71; /* Green for selected seats */
+}
+
+/* Seat Info Section */
+.seat-info {
+    text-align: left;
+}
+
+.seat-info h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Ticket Details */
+.ticket {
+    background: #fff; /* Clean white background */
+    border: 2px solid #2e2e2e; /* Bold border for ticket */
+    padding: 20px;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 500px; /* Restricts ticket width */
+    margin: 20px auto;
+    text-align: center; /* Centers ticket content */
+}
+
+.ticket h2 {
+    color: #ff6f00; /* Bright color for ticket heading */
+}
+
+.ticket-details {
+    margin: 20px 0;
+}
+
+.ticket-details p {
+    font-size: 1.2rem; /* Readable font size */
+}
+
+/* Footer Section */
+footer {
+    background-color: #1e1e2d; /* Dark background matching header */
+    color: white; /* White text for readability */
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.1rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Starts slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends in place */
+    }
+}
